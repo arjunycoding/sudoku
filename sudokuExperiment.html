@@ -5,10 +5,8 @@
 <style>
 
     .table-boxes, .table{
-        text-align: center;
-        width:40px;
-        height:40px;
-        padding:10px;
+        width:50px;
+        height:50px;
         border:2px solid black;
     }
 
@@ -31,7 +29,9 @@
         border-bottom:5px solid black;
     }
 
-
+    .input-boxes:hover{
+        cursor:pointer;
+    }
 
 
 
@@ -45,7 +45,12 @@
 <table class = "grid" cellspacing = "0px">
     <thead>
     <tr>
-        <th class = "table-boxes"></th> <!--col 1-->
+        <!--col 1-->
+        <th class = "table-boxes input-boxes">
+            <label for="number0"></label>
+            <input type="text" id="number0" name="number0" required
+                   minlength="0" maxlength="1" size = "1"  style = "width: 50px; height: 50px;" >
+        </th>
         <th class = "table-boxes"></th> <!--col 2-->
         <th class = "table-boxes line"></th> <!--col 3-->
         <th class = "table-boxes"></th> <!--col 4-->
@@ -158,4 +163,6 @@
 </table>
 </div>
 
+
 </body>
+
