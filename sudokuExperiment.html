@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <meta charset="utf-8" lang="en">
 <title>Sudoku Web Page</title>
-<link rel='icon' href='favico.png' type='image/x-icon'/ >
+<link rel='icon' href='favico.png' type='image/x-icon'/>
 <style>
 
     .table-boxes, .table{
+
+        padding:0px;
         width:50px;
         height:50px;
         border:2px solid black;
@@ -28,10 +30,11 @@
 
         border-bottom:5px solid black;
     }
-
-    .input-boxes:hover{
-        cursor:pointer;
+    .input-boxes{
+        border:5px solid blue;
     }
+
+
 
 
 
@@ -46,8 +49,8 @@
     <thead>
     <tr>
         <!--col 1-->
-        <th class = "table-boxes input-boxes">
-            <label for="number0"></label>
+        <th class = "table-boxes">
+            <label class = "input-boxes" for="number0"></label>
             <input type="text" id="number0" name="number0" required
                    minlength="0" maxlength="1" size = "1"  style = "width: 50px; height: 50px;" >
         </th>
