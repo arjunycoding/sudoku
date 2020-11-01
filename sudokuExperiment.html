@@ -1,173 +1,104 @@
 <!DOCTYPE html>
-<meta charset="utf-8" lang="en">
-<title>Sudoku Web Page</title>
-<link rel='icon' href='favico.png' type='image/x-icon'/>
-<style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elabs</title>
 
-    .table-boxes, .table{
+    <style>
 
-        padding:0px;
-        width:50px;
-        height:50px;
-        border:2px solid black;
-    }
+<!--        .heading{-->
+<!--           border:3px solid black;-->
+<!--        }-->
 
-    .grid{
-        position:absolute;
-        float:right;
-        top:100px;
-        left:500px;
-        text-align: center;
-        border:2px solid black;
+            .heading{
+                background: rgb(219, 235, 255);
+                border: 2px solid black;
+                font-family: "Comic Sans MS", fantasy;
+                padding: 5px;
+                width: 550px;
+                position:absolute;
+                top:-10px;
+                left:10px;
+                z-index:1;
+            }
 
-    }
+            .articles{
+                background: rgb(219, 235, 255);
+                border: 2px solid black;
+                font-family: "Comic Sans MS", fantasy;
+                padding: 5px;
+                width: 1300px;
+                height:500px;
+                position:absolute;
+                top:100px;
+                left:10px;
+                z-index:1;
+            }
 
-    .line{
-        border-right:5px solid black;
-    }
+            .contents{
+                background: rgb(219, 235, 255);
+                border: 2px solid black;
+                font-family: "Comic Sans MS", fantasy;
+                padding: 5px;
+                width: 200px;
+                height:500px;
+                position:absolute;
+                top:100px;
+                left:85%;
+                z-index:1;
+            }
 
-    .line-bottom{
+            .credits{
 
-        border-bottom:5px solid black;
-    }
-    .input-boxes{
-        border:5px solid blue;
-    }
+                background: rgb(219, 235, 255);
+                border: 2px solid black;
+                font-family: "Comic Sans MS", fantasy;
+                padding: 5px;
+                width:1500px;
+                height:200px;
+                position:absolute;
+                top:650px;
+                left:10px;
+                z-index:1;
 
+                overflow-y: auto;
+                overflow-x: hidden;
 
+            }
 
-
-
-</style>
-
-
-
+    </style>
+</head>
 <body>
 
-<div>
-<table class = "grid" cellspacing = "0px">
-    <thead>
-    <tr>
-        <!--col 1-->
-        <th class = "table-boxes">
-            <label class = "input-boxes" for="number0"></label>
-            <input type="text" id="number0" name="number0" required
-                   minlength="0" maxlength="1" size = "1"  style = "width: 50px; height: 50px;" >
-        </th>
-        <th class = "table-boxes"></th> <!--col 2-->
-        <th class = "table-boxes line"></th> <!--col 3-->
-        <th class = "table-boxes"></th> <!--col 4-->
-        <th class = "table-boxes"></th> <!--col 5-->
-        <th class = "table-boxes line"></th> <!--col 6-->
-        <th class = "table-boxes"></th> <!--col 7-->
-        <th class = "table-boxes"></th> <!--col 8-->
-        <th class = "table-boxes line"></th> <!--col 9-->
+<h1 class = "heading">Welcome To The Yuvaraj Company</h1>
 
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes line"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes line"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes line"></td>
-
-
-    </tr>
-
-    <tr>
-        <td class = "table-boxes line-bottom"></td>
-        <td class = "table-boxes line-bottom"></td>
-        <td class = "table-boxes line line-bottom"></td>
-        <td class = "table-boxes line-bottom"></td>
-        <td class = "table-boxes line-bottom"></td>
-        <td class = "table-boxes line line-bottom"></td>
-        <td class = "table-boxes line-bottom"></td>
-        <td class = "table-boxes line-bottom"></td>
-        <td class = "table-boxes line line-bottom"></td>
-
-    </tr>
-    <tr>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes line"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes line"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes line"></td>
-
-    </tr>
-    <tr>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes line"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes line"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes line"></td>
-
-    </tr><tr>
-        <td class = "table-boxes line-bottom"></td>
-        <td class = "table-boxes line-bottom"></td>
-        <td class = "table-boxes line line-bottom"></td>
-        <td class = "table-boxes line-bottom"></td>
-        <td class = "table-boxes line-bottom"></td>
-        <td class = "table-boxes line line-bottom"></td>
-        <td class = "table-boxes line-bottom"></td>
-        <td class = "table-boxes line-bottom"></td>
-        <td class = "table-boxes line line-bottom"></td>
-
-    </tr><tr>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes line"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes line"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes line"></td>
-
-    </tr>
-    <tr>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes line"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes line"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes"></td>
-        <td class = "table-boxes line"></td>
-
-    </tr>
-    <tr>
-        <td class = "table-boxes line-bottom"></td>
-        <td class = "table-boxes line-bottom"></td>
-        <td class = "table-boxes line line-bottom"></td>
-        <td class = "table-boxes line-bottom"></td>
-        <td class = "table-boxes line-bottom"></td>
-        <td class = "table-boxes line line-bottom"></td>
-        <td class = "table-boxes line-bottom"></td>
-        <td class = "table-boxes line-bottom"></td>
-        <td class = "table-boxes line line-bottom"></td>
-    </tr>
-
-    </tbody>
-</table>
+<div  class = "articles">
+    <h2>Heading 2</h2>
+    <p>
+        ?????????????????????????????????????????????????????????????????????????
+        ?????????????????????????????????????????????????????????????????????????
+        ?????????????????????????????????????????????????????????????????????????
+        ?????????????????????????????????????????????????????????????????????????
+        ?????????????????????????????????????????????????????????????????????????
+    </p>
 </div>
 
+<div  class = "contents">
+    <h2>Table Of Contents</h2>
+    <ol>
+        <li>Hi</li>
+        <li>Hi</li>
+        <li>Hi</li>
+    </ol>
+</div>
+
+<div class = "credits">
+
+    <h2>Credits</h2>
+    <h4>Web Deisiner:</h4>
+    <p>Arjun Yuvaraj</p>
+
+</div>
 
 </body>
-
-
-
+</html>
